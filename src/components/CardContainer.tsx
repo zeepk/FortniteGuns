@@ -10,13 +10,14 @@ export default function CardContainer() {
   const [weapon2, setWeapon2] = useState<Weapon>(weapons[4]);
 
   return (
-    <div className="flex justify-around p-12 w-[80vw] h-[70vh] rounded-2xl bg-green-200">
-      <div className="flex flex-col p-2 items-center w-5/12 rounded-xl bg-green-200 m-2 text-black">
+    <div className="flex flex-wrap justify-around py-4 w-screen md:w-[80vw] min-h-[70vh] rounded-2xl bg-[#445144]">
+      <div className="flex flex-col p-2 items-center w-full md:w-5/12 rounded-xl m-2">
         <WeaponSelect weapon={weapon1} setWeapon={setWeapon1} />
         <RaritySelect weapon={weapon1} setWeapon={setWeapon1} />
         <Card weapon={weapon1} compare={weapon2} />
       </div>
-      <div className="flex flex-col p-2 items-center w-5/12 rounded-xl bg-green-200 m-2 text-black">
+      <h1 className="text-4xl font-bold text-white my-12">VS</h1>
+      <div className="flex flex-col p-2 items-center w-full md:w-5/12 rounded-xl  m-2">
         <WeaponSelect weapon={weapon2} setWeapon={setWeapon2} />
         <RaritySelect weapon={weapon2} setWeapon={setWeapon2} />
         <Card weapon={weapon2} compare={weapon1} />

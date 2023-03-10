@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
 import CardContainer from "../components/CardContainer";
 import Guff from "../assets/guff.png";
 
@@ -8,14 +9,28 @@ import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 ---
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60250NS57K"
+></script>
+<script>
+  // @ts-nocheck
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-60250NS57K");
+</script>
+
 <Layout title="Fortnite Weapon Comparison">
   <main
-    class="p-4 flex flex-col items-center justify-center max-w-screen max-h-screen overflow-hidden"
+    class="text-white p-4 flex flex-col items-center justify-center max-w-screen md:max-h-screen overflow-hidden"
   >
     <h1 class="mb-8 text-2xl font-semibold text-center">
       Fortnite Weapon Comparison
     </h1>
     <CardContainer client:load />
-    <img src={Guff} class="w-40 absolute bottom-0 right-0" />
+    <img src={Guff} class="w-40 absolute md:bottom-0 right-0" />
+    <Footer />
   </main>
 </Layout>

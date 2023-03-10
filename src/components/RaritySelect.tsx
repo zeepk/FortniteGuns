@@ -40,8 +40,8 @@ export default function WeaponSelect({ weapon, setWeapon }: Props) {
 const itemTemplate = (option: any) => {
   return (
     <div className="flex justify-between align-center w-full">
-      <div>{option.name}</div>
-      <img className="h-8" alt={option.name} src={option.icon} />
+      <div>{option?.name}</div>
+      <img className="h-8" alt={option?.name} src={option?.icon} />
     </div>
   );
 };

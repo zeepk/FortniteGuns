@@ -32,6 +32,9 @@ export default function WeaponSelect({ weapon, setWeapon }: Props) {
       filter
       itemTemplate={itemTemplate}
       valueTemplate={itemTemplate}
+      scrollHeight="400px"
+      showFilterClear
+      virtualScrollerOptions={{ itemSize: 50, scrollWidth: "800px" }}
     />
   );
 }
